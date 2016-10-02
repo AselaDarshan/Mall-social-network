@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="21"
-    density="560dpi"
+    abi="x86,armeabi-v7a"
+    api-level="19"
+    density="xhdpi"
     format="7"
-    timestamp="3724916723740"
+    timestamp="15845212802942"
     token="-3539954139961610093" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="205" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="102" />
     <task
         name="verifier"
-        duration="0" />
+        duration="8" />
 
-    <build timestamp="3591627138999" >
+    <artifact
+        location="/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/outputs/apk/Application-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="15845212802942" >
         <artifact
             location="/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/outputs/apk/Application-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="3724916723740" />
 
 </instant-run>
