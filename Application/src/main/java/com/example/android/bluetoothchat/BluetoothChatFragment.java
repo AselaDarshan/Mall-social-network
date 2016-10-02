@@ -470,7 +470,7 @@ public class BluetoothChatFragment extends Fragment {
                 if (mBluetoothAdapter.isDiscovering()) {
                     mBluetoothAdapter.cancelDiscovery();
                 }
-                
+
                 Log.d("BluetoothChatService","Discovery is finished");
                 if(mDevices.size() > 0)
                 {
