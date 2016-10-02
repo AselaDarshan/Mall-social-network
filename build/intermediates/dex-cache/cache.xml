@@ -26,7 +26,7 @@
         jar="/home/asela/Downloads/BluetoothChat/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="d85954d3541998cd32e9901949efbc0188498895">
+        sha1="f1f342279262a096c60c52762c507c1c464e3c06">
         <dex dex="/home/asela/Downloads/BluetoothChat/Application/build/intermediates/pre-dexed/debug/instant-run-bootstrap_9a4e73d34991300d79cc68ae1431f45cfa9aeca8.jar" />
     </item>
     <item
@@ -47,7 +47,7 @@
         jar="/home/asela/Downloads/BluetoothChat/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="699ced05e3e64e9373f2e3e459a5a85268152f43">
+        sha1="0f7e22d85a0e207b403f6574d374f9954b464c8d">
         <dex dex="/home/asela/Downloads/BluetoothChat/Application/build/intermediates/pre-dexed/debug/instant-run_207c7c448ea3e9ddf813bf0e3b2dbd3e844ffdcd.jar" />
     </item>
     <item
