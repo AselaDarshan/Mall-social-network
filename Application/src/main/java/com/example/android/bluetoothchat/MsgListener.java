@@ -12,4 +12,8 @@ public interface MsgListener {
     public ArrayList<Msg> getAllMsg();
 
     public int getMsgCount();
+
+    public ArrayList<Msg> getComments(String uid);
+
+    public void updateRank(String uid, int rank);
 }
