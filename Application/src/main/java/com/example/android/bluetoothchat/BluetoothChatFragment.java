@@ -45,6 +45,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.TimelineFragment;
 import com.example.android.common.logger.Log;
 
 import java.util.ArrayList;
@@ -93,6 +94,8 @@ public class BluetoothChatFragment extends Fragment {
     private BluetoothChatService mChatService = null;
 
     private ArrayList<BluetoothDevice> mDevices;
+
+    ButtonClicked mCallback;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -245,6 +248,7 @@ public class BluetoothChatFragment extends Fragment {
         */
         // Check that there's actually something to send
         if (message!=null && message.length() > 0) {
+            mCallback.sendText(message);
             mChatService.sendMessage(message,mDevices);
 
             // Reset out string buffer to zero and clear the edit text field
@@ -408,18 +412,6 @@ public class BluetoothChatFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.secure_connect_scan: {
-//                // Launch the DeviceListActivity to see devices and do scan
-//                Intent serverIntent = new Intent(getActivity(), DeviceListActivity.class);
-//                startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE_SECURE);
-                return true;
-            }
-            case R.id.insecure_connect_scan: {
-//                // Launch the DeviceListActivity to see devices and do scan
-//                Intent serverIntent = new Intent(getActivity(), DeviceListActivity.class);
-//                startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE_INSECURE);
-                return true;
-            }
             case R.id.discoverable: {
                 // Ensure this device is discoverable by others
                 ensureDiscoverable();
@@ -479,5 +471,33 @@ public class BluetoothChatFragment extends Fragment {
             }
         }
     };
+
+    public interface ButtonClicked{
+        public void sendText(String text);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (ButtonClicked) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement TextClicked");
+        }
+    }
+
+    public void someMethod(){
+        mCallback.sendText("YOUR TEXT");
+    }
+
+    @Override
+    public void onDetach() {
+        mCallback = null; // => avoid leaking, thanks @Deepscorn
+        super.onDetach();
+    }
 
 }
