@@ -4,27 +4,27 @@
     api-level="17"
     density="mdpi"
     format="7"
-    timestamp="5137624648334"
+    timestamp="18435646886021"
     token="-8908339072849581599" >
 
     <task
         name="javac"
-        duration="99" />
+        duration="124" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="73" />
+        duration="14" />
     <task
         name="verifier"
-        duration="6" />
+        duration="3" />
 
     <artifact
         location="/home/asela/Downloads/BluetoothChat/Application/build/outputs/apk/Application-debug.apk"
         type="MAIN" />
 
-    <build timestamp="5137624648334" >
+    <build timestamp="18435646886021" >
         <artifact
             location="/home/asela/Downloads/BluetoothChat/Application/build/outputs/apk/Application-debug.apk"
             type="MAIN" />

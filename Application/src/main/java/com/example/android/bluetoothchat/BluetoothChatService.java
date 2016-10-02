@@ -125,8 +125,8 @@ public class BluetoothChatService {
 
         // Start the thread to listen on a BluetoothServerSocket
         if (mSecureAcceptThread == null) {
-            mSecureAcceptThread = new AcceptThread(true);
-            mSecureAcceptThread.start();
+//            mSecureAcceptThread = new AcceptThread(true);
+//            mSecureAcceptThread.start();
         }
         if (mInsecureAcceptThread == null) {
             mInsecureAcceptThread = new AcceptThread(false);
@@ -195,6 +195,8 @@ public class BluetoothChatService {
             mInsecureAcceptThread = null;
         }
 
+
+        setState(STATE_CONNECTED);
         // Start the thread to manage the connection and perform transmissions
         mConnectedThread = new ConnectedThread(socket, socketType);
         mConnectedThread.start();
@@ -206,14 +208,14 @@ public class BluetoothChatService {
         msg.setData(bundle);
         mHandler.sendMessage(msg);
 
-        setState(STATE_CONNECTED);
         if (message!=null) {
             // Get the message bytes and tell the BluetoothChatService to write
             byte[] send = message.getBytes();
             write(send);
-            Log.d("SendThread","Message sent");
+            Log.d(TAG,"Message sent");
             this.stop();
             this.start();
+            message=null;
         }
 
 
@@ -333,11 +335,16 @@ public class BluetoothChatService {
             BluetoothSocket socket = null;
 
             // Listen to the server socket if we're not connected
+            Log.d(TAG, "state: "+mState);
             while (mState != STATE_CONNECTED) {
                 try {
                     // This is a blocking call and will only return on a
                     // successful connection or an exception
+                    Log.e(TAG, "accepting..");
                     socket = mmServerSocket.accept();
+                    Log.e(TAG, "socket created");
+                    Log.d(TAG,"State : "+mState);
+                    setState(STATE_CONNECTING);
                 } catch (IOException e) {
                     Log.e(TAG, "Socket Type: " + mSocketType + "accept() failed", e);
                     break;
@@ -345,6 +352,7 @@ public class BluetoothChatService {
 
                 // If a connection was accepted
                 if (socket != null) {
+                    Log.d(TAG,"State after connection accepted");
                     synchronized (BluetoothChatService.this) {
                         switch (mState) {
                             case STATE_LISTEN:
@@ -432,6 +440,7 @@ public class BluetoothChatService {
                     Log.e(TAG, "unable to close() " + mSocketType +
                             " socket during connection failure", e2);
                 }
+                Log.e(TAG, "unable to connect " , e);
                 connectionFailed();
                 return;
             }
@@ -492,10 +501,11 @@ public class BluetoothChatService {
                     // Read from the InputStream
                     bytes = mmInStream.read(buffer);
                     // Start the service over to restart listening mode
-
+                    Log.e(TAG, "acceptt message: "+bytes);
                     // Send the obtained bytes to the UI Activity
                     mHandler.obtainMessage(Constants.MESSAGE_READ, bytes, -1, buffer)
                             .sendToTarget();
+                    Log.e(TAG, "acceptt after handler ");
                     BluetoothChatService.this.start();
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);

@@ -244,7 +244,7 @@ public class BluetoothChatFragment extends Fragment {
         }
         */
         // Check that there's actually something to send
-        if (message.length() > 0) {
+        if (message!=null && message.length() > 0) {
             mChatService.sendMessage(message,device);
 
             // Reset out string buffer to zero and clear the edit text field
@@ -357,18 +357,18 @@ public class BluetoothChatFragment extends Fragment {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case REQUEST_CONNECT_DEVICE_SECURE:
-                // When DeviceListActivity returns with a device to connect
-                if (resultCode == Activity.RESULT_OK) {
-                    connectDevice(data, true);
-                }
-                break;
-            case REQUEST_CONNECT_DEVICE_INSECURE:
-                // When DeviceListActivity returns with a device to connect
-                if (resultCode == Activity.RESULT_OK) {
-                    connectDevice(data, false);
-                }
-                break;
+//            case REQUEST_CONNECT_DEVICE_SECURE:
+//                // When DeviceListActivity returns with a device to connect
+//                if (resultCode == Activity.RESULT_OK) {
+//                    connectDevice(data, true);
+//                }
+//                break;
+//            case REQUEST_CONNECT_DEVICE_INSECURE:
+//                // When DeviceListActivity returns with a device to connect
+//                if (resultCode == Activity.RESULT_OK) {
+//                    connectDevice(data, false);
+//                }
+//                break;
             case REQUEST_ENABLE_BT:
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
@@ -457,11 +457,15 @@ public class BluetoothChatFragment extends Fragment {
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                Log.d("BroadcastReceiver","Broadcast receiver started");
                 // Get the BluetoothDevice object from the Intent
-                if (mBluetoothAdapter.isDiscovering()) {
-                    mBluetoothAdapter.cancelDiscovery();
-                }
+
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                sendMessage(mMessage,device);
+                Log.d("BluetoothChatService","Device Address : "+device.getAddress());
+                if(device.getAddress().equals("00:0C:E7:1A:57:A3")){  //00:0C:E7:1A:69:D8
+                    if (mBluetoothAdapter.isDiscovering()) {
+                        mBluetoothAdapter.cancelDiscovery();
+                    }
+                    sendMessage(mMessage,device);
+                }
                 // When discovery is finished, change the Activity title
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
                 //sendMessage(mMessage);
