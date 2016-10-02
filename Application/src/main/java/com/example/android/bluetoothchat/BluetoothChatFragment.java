@@ -224,7 +224,7 @@ public class BluetoothChatFragment extends Fragment {
      *
      * @param message A string of text to send.
      */
-    private void sendMessage(String message,BluetoothDevice device) {
+    private void sendMessage(String message,ArrayList<BluetoothDevice> mDevices) {
         /*
         // Check that we're actually connected before trying anything
         if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
@@ -245,7 +245,7 @@ public class BluetoothChatFragment extends Fragment {
         */
         // Check that there's actually something to send
         if (message!=null && message.length() > 0) {
-            mChatService.sendMessage(message,device);
+            mChatService.sendMessage(message,mDevices);
 
             // Reset out string buffer to zero and clear the edit text field
             mOutStringBuffer.setLength(0);
@@ -435,6 +435,7 @@ public class BluetoothChatFragment extends Fragment {
     private void doDiscovery() {
         Log.d(TAG, "doDiscovery()");
 
+        this.mDevices.clear();
         // If we're already discovering, stop it
         if (mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.cancelDiscovery();
@@ -459,16 +460,22 @@ public class BluetoothChatFragment extends Fragment {
                 // Get the BluetoothDevice object from the Intent
 
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                Log.d("BluetoothChatService","Device Address : "+device.getAddress());
-                if(device.getAddress().equals("00:0C:E7:1A:57:A3")){  //00:0C:E7:1A:69:D8
-                    if (mBluetoothAdapter.isDiscovering()) {
-                        mBluetoothAdapter.cancelDiscovery();
-                    }
-                    sendMessage(mMessage,device);
-                }
+
+                Log.d("BluetoothChatService","Device Found - Device Address : "+device.getAddress());
+                mDevices.add(device);
+
                 // When discovery is finished, change the Activity title
             } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
-                //sendMessage(mMessage);
+
+                if (mBluetoothAdapter.isDiscovering()) {
+                    mBluetoothAdapter.cancelDiscovery();
+                }
+                
+                Log.d("BluetoothChatService","Discovery is finished");
+                if(mDevices.size() > 0)
+                {
+                    sendMessage(mMessage,mDevices);
+                }
             }
         }
     };

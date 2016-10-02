@@ -1,6 +1,0 @@
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/android/bluetoothchat/BluetoothChatService$SendThread$override.class
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/android/bluetoothchat/BluetoothChatService$ConnectedThread$override.class
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/android/bluetoothchat/BluetoothChatService$ConnectThread$override.class
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/android/bluetoothchat/BluetoothChatService$AcceptThread$override.class
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/android/bluetoothchat/BluetoothChatService$override.class
-CHANGED,/home/asela/Downloads/BluetoothChat/Application/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class

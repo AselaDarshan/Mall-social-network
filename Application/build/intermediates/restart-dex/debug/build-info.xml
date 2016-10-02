@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="17"
-    density="mdpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="22"
+    density="xxhdpi"
     format="7"
-    timestamp="18435646886021"
+    timestamp="27461746266887"
     token="-8908339072849581599" >
 
     <task
         name="javac"
-        duration="124" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="14" />
+        duration="0" />
     <task
         name="verifier"
-        duration="3" />
+        duration="0" />
 
-    <artifact
-        location="/home/asela/Downloads/BluetoothChat/Application/build/outputs/apk/Application-debug.apk"
-        type="MAIN" />
-
-    <build timestamp="18435646886021" >
+    <build timestamp="27222500087061" >
         <artifact
             location="/home/asela/Downloads/BluetoothChat/Application/build/outputs/apk/Application-debug.apk"
             type="MAIN" />
     </build>
+    <build timestamp="27461746266887" />
 
 </instant-run>
