@@ -13,7 +13,7 @@ public interface MsgListener {
 
     public int getMsgCount();
 
-    public ArrayList<Msg> getComments(String uid);
+    public ArrayList<Comment> getComments(String uid);
 
     public void updateRank(String uid, int rank);
 }

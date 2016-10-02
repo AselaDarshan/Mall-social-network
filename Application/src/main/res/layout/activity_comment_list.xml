@@ -29,14 +29,15 @@
             android:layout_height="99dp"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText" />
+            android:id="@+id/comment" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reply"
             android:id="@+id/reply_button"
-            android:layout_gravity="right" />
+            android:layout_gravity="right"
+            android:onClick="send"/>
     </LinearLayout>
 
 </LinearLayout>

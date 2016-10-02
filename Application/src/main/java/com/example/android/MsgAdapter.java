@@ -23,7 +23,8 @@ import java.util.List;
  */
 public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder>{
 
-    private List<Msg> itemList;
+    public final static String MESSAGE_ID = "com.example.mall-social-network.MESSAGE";
+    private static List<Msg> itemList;
     Dialog rankDialog;
     static Context mContext;
 
@@ -59,6 +60,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder>{
                 mContext.startActivity(intent);
             }else if (v.getId() == commentBtn.getId()) {
                 Intent intent = new Intent(mContext, CommentList.class);
+                intent.putExtra(MsgAdapter.MESSAGE_ID, itemList.get(getAdapterPosition()).getUID());
                 mContext.startActivity(intent);
             } else {
                 Toast.makeText(v.getContext(), "ROW PRESSED = " + String.valueOf(getAdapterPosition()), Toast.LENGTH_SHORT).show();

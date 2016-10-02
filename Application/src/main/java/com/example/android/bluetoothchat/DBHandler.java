@@ -26,7 +26,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
     private static final String KEY_NOOFRANKERS = "_noOfRankers";
     private static final String KEY_IMAGE = "_image";
 
-    String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+" ("+KEY_ID+" INTEGER PRIMARY KEY,"+KEY_UID+" TEXT, "+KEY_TSTAMP+" TEXT,"+KEY_TYPE+" TEXT,"+KEY_INREPLYTOMESSAGEID+" TEXT,"+KEY_TEXT+" TEXT, "+KEY_RANK+" TEXT,"+KEY_NOOFRANKERS+" TEXT,"+KEY_IMAGE+" TEXT)";
+    String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+" ("+KEY_ID+" INTEGER PRIMARY KEY,"+KEY_UID+" TEXT, "+KEY_TSTAMP+" TEXT,"+KEY_TYPE+" INTEGER,"+KEY_INREPLYTOMESSAGEID+" TEXT,"+KEY_TEXT+" TEXT, "+KEY_RANK+" INTEGER,"+KEY_NOOFRANKERS+" INTEGER,"+KEY_IMAGE+" TEXT)";
     String DROP_TABLE = "DROP TABLE IF EXISTS "+TABLE_NAME;
 
     public DBHandler(Context context) {
@@ -49,8 +49,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
         SQLiteDatabase db = this.getWritableDatabase();
         try{
             ContentValues values = new ContentValues();
-            values.put(KEY_ID, msg.getID());
-            values.put(KEY_ID, msg.getUID());
+            values.put(KEY_UID, msg.getUID());
             values.put(KEY_TEXT, msg.getText());
             values.put(KEY_RANK,msg.getRank());
             values.put(KEY_TSTAMP,msg.getTstamp());
@@ -59,7 +58,6 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
             values.put(KEY_NOOFRANKERS,msg.getNoOfRankers());
             values.put(KEY_IMAGE,msg.getImage());
             db.insert(TABLE_NAME, null, values);
-
             db.close();
         }catch (Exception e){
             Log.e("problem",e+"");
@@ -72,7 +70,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
         ArrayList<Msg> msgList = null;
         try{
             msgList = new ArrayList<Msg>();
-            String QUERY = "SELECT * FROM "+TABLE_NAME;
+            String QUERY = "SELECT * FROM "+TABLE_NAME+" WHERE " + KEY_TYPE + "=1";
             Cursor cursor = db.rawQuery(QUERY, null);
             if(!cursor.isLast())
             {
@@ -88,39 +86,28 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
                     msg.setRank(cursor.getInt(6));
                     msg.setNoOfRankers(cursor.getInt(7));
                     msg.setImage(cursor.getString(8));
-
                     msgList.add(msg);
                 }
             }
             db.close();
         }catch (Exception e){
-            Log.e("error",e+"");
+            Log.e("Errorrrrrr",e+"");
         }
         return msgList;
     }
 
-    public ArrayList<Msg> getComments(String uid) {
+    public ArrayList<Comment> getComments(String uid) {
         SQLiteDatabase db = this.getReadableDatabase();
-        ArrayList<Msg> commentList = null;
+        ArrayList<Comment> commentList = null;
         try{
-            commentList = new ArrayList<Msg>();
-            String QUERY = "SELECT * FROM "+TABLE_NAME+"LIMIT=5 WHERE KEY_UID ='"+uid+"'";
+            commentList = new ArrayList<Comment>();
+            String QUERY = "SELECT * FROM "+TABLE_NAME+" WHERE "+KEY_INREPLYTOMESSAGEID +"='"+uid+"' LIMIT 5 ";
             Cursor cursor = db.rawQuery(QUERY, null);
             if(!cursor.isLast())
             {
                 while (cursor.moveToNext())
                 {
-                    Msg comment = new Msg();
-                    comment.setID(cursor.getInt(0));
-                    comment.setUID(cursor.getString(1));
-                    comment.setTstamp(cursor.getString(2));
-                    comment.setType(cursor.getInt(3));
-                    comment.setInReplyToMessageID(cursor.getString(4));
-                    comment.setText(cursor.getString(5));
-                    comment.setRank(cursor.getInt(6));
-                    comment.setNoOfRankers(cursor.getInt(7));
-                    comment.setImage(cursor.getString(8));
-
+                    Comment comment = new Comment(cursor.getString(5), cursor.getString(8), cursor.getString(2));
                     commentList.add(comment);
                 }
             }
