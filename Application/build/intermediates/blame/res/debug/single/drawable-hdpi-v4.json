@@ -1,14 +1,18 @@
 [
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/bluetooth_logo.png",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/drawable-hdpi/bluetooth_logo.png"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/tile.9.png",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/drawable-hdpi/tile.9.png"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_device_access_bluetooth_searching.png",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/drawable-hdpi/ic_action_device_access_bluetooth_searching.png"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_device_access_bluetooth_searching.png",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/drawable-hdpi/ic_action_device_access_bluetooth_searching.png"
+    },
+    {
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/tile.9.png",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/drawable-hdpi/tile.9.png"
     }
 ]
