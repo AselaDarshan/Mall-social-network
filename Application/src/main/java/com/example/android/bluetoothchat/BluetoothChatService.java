@@ -219,7 +219,7 @@ public class BluetoothChatService {
             write(send);
             Log.d(TAG,"Message sent");
             this.stop();
-            this.start();
+//            this.start();
 
         }
 
@@ -598,6 +598,7 @@ public class BluetoothChatService {
                 BluetoothChatService.this.connect(bDevices.get(i),false);
             }
             message=null;
+            BluetoothChatService.this.start();
         }
     }
 }

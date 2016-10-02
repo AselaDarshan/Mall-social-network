@@ -59,6 +59,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
             values.put(KEY_NOOFRANKERS,msg.getNoOfRankers());
             values.put(KEY_IMAGE,msg.getImage());
             db.insert(TABLE_NAME, null, values);
+
             db.close();
         }catch (Exception e){
             Log.e("problem",e+"");
@@ -98,6 +99,38 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
         return msgList;
     }
 
+    public ArrayList<Msg> getComments(String uid) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<Msg> commentList = null;
+        try{
+            commentList = new ArrayList<Msg>();
+            String QUERY = "SELECT * FROM "+TABLE_NAME+"LIMIT=5 WHERE KEY_UID ='"+uid+"'";
+            Cursor cursor = db.rawQuery(QUERY, null);
+            if(!cursor.isLast())
+            {
+                while (cursor.moveToNext())
+                {
+                    Msg comment = new Msg();
+                    comment.setID(cursor.getInt(0));
+                    comment.setUID(cursor.getString(1));
+                    comment.setTstamp(cursor.getString(2));
+                    comment.setType(cursor.getInt(3));
+                    comment.setInReplyToMessageID(cursor.getString(4));
+                    comment.setText(cursor.getString(5));
+                    comment.setRank(cursor.getInt(6));
+                    comment.setNoOfRankers(cursor.getInt(7));
+                    comment.setImage(cursor.getString(8));
+
+                    commentList.add(comment);
+                }
+            }
+            db.close();
+        }catch (Exception e){
+            Log.e("error",e+"");
+        }
+        return commentList;
+    }
+
     @Override
     public int getMsgCount() {
         int num = 0;
@@ -112,5 +145,20 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
             Log.e("error",e+"");
         }
         return 0;
+    }
+
+    public void updateRank(String uid,int rank) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        try{
+            String QUERY = "update " + TABLE_NAME+ " set KEY_RANK ='"+rank+"',KEY_NOOFRANKERS = KEY_NOOFRANKERS + 1 where id='" + uid + "'";
+            Cursor cursor = db.rawQuery(QUERY, null);
+
+            db.close();
+
+        }catch (Exception e){
+            Log.e("error",e+"");
+        }
+
     }
 }
