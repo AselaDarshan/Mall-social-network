@@ -24,12 +24,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.widget.ArrayAdapter;
 
 import com.example.android.common.logger.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.UUID;
 
 /**
@@ -69,6 +71,8 @@ public class BluetoothChatService {
     public static final int STATE_LISTEN = 1;     // now listening for incoming connections
     public static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
     public static final int STATE_CONNECTED = 3;  // now connected to a remote device
+
+    private boolean isFinished = true;
 
     /**
      * Constructor. Prepares a new BluetoothChat session.
@@ -132,6 +136,7 @@ public class BluetoothChatService {
             mInsecureAcceptThread = new AcceptThread(false);
             mInsecureAcceptThread.start();
         }
+        setFinished(true);
     }
 
     /**
@@ -215,7 +220,7 @@ public class BluetoothChatService {
             Log.d(TAG,"Message sent");
             this.stop();
             this.start();
-            message=null;
+
         }
 
 
@@ -298,6 +303,16 @@ public class BluetoothChatService {
         BluetoothChatService.this.start();
     }
 
+    public synchronized boolean isFinished() {
+        Log.d(TAG,"Is Finished : "+isFinished);
+        return isFinished;
+    }
+
+    public synchronized void setFinished(boolean finished) {
+        Log.d(TAG,"Set Finished : "+finished);
+        isFinished = finished;
+    }
+
     /**
      * This thread runs while listening for incoming connections. It behaves
      * like a server-side client. It runs until a connection is accepted
@@ -346,6 +361,7 @@ public class BluetoothChatService {
                     Log.d(TAG,"State : "+mState);
                     setState(STATE_CONNECTING);
                 } catch (IOException e) {
+
                     Log.e(TAG, "Socket Type: " + mSocketType + "accept() failed", e);
                     break;
                 }
@@ -425,7 +441,8 @@ public class BluetoothChatService {
             setName("ConnectThread" + mSocketType);
 
             // Always cancel discovery because it will slow down a connection
-            mAdapter.cancelDiscovery();
+            if(mAdapter.isDiscovering())
+                mAdapter.cancelDiscovery();
 
             // Make a connection to the BluetoothSocket
             try {
@@ -441,6 +458,7 @@ public class BluetoothChatService {
                             " socket during connection failure", e2);
                 }
                 Log.e(TAG, "unable to connect " , e);
+                setFinished(true);
                 connectionFailed();
                 return;
             }
@@ -532,6 +550,7 @@ public class BluetoothChatService {
             } catch (IOException e) {
                 Log.e(TAG, "Exception during write", e);
             }
+            BluetoothChatService.this.setFinished(true);
         }
 
         public void cancel() {
@@ -543,24 +562,42 @@ public class BluetoothChatService {
         }
     }
 
-    public synchronized  void sendMessage(String message, BluetoothDevice device)
+    public synchronized  void sendMessage(String message, ArrayList<BluetoothDevice> mDevices)
     {
-        mSendThread = new SendThread(message,device);
+        Log.d(TAG,"Send Message");
+        while(mSendThread!=null && mSendThread.isAlive()) {}
+        Log.d(TAG,"New Send Thread created");
+        mSendThread = new SendThread(message,mDevices);
         mSendThread.start();
     }
 
     private class SendThread extends Thread
     {
-        private BluetoothDevice bDevice;
+        private ArrayList<BluetoothDevice> bDevices;
 
-        public SendThread(String message, BluetoothDevice device)
+
+        public SendThread(String message, ArrayList<BluetoothDevice> mDevices)
         {
+            Log.d(TAG,"Send Thread Started");
             BluetoothChatService.this.message = message;
-            this.bDevice = device;
+            this.bDevices = mDevices;
         }
         public void run()
         {
-            BluetoothChatService.this.connect(bDevice,false);
+            for(int i=0; i<bDevices.size();i++){
+                Log.d(TAG,"Sending message to discovered devices");
+                while(!BluetoothChatService.this.isFinished()){
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                BluetoothChatService.this.setFinished(false);
+                Log.d(TAG,"Sending message to device : "+bDevices.get(i));
+                BluetoothChatService.this.connect(bDevices.get(i),false);
+            }
+            message=null;
         }
     }
 }
