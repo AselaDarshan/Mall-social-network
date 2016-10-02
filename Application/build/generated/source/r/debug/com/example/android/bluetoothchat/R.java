@@ -141,6 +141,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int contentPaddingTop=0x7f010009;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int layoutManager=0x7f010019;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -223,6 +231,14 @@ containing a value of this type.
 </table>
          */
         public static final int orientation=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int reverseLayout=0x7f01001b;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -239,6 +255,22 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int rowOrderPreserved=0x7f010010;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int spanCount=0x7f01001a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stackFromEnd=0x7f01001c;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -260,86 +292,98 @@ containing a value of this type.
         public static final int cardview_default_radius=0x7f040004;
         public static final int default_gap=0x7f040005;
         public static final int horizontal_page_margin=0x7f040000;
-        public static final int margin_huge=0x7f040006;
-        public static final int margin_large=0x7f040007;
-        public static final int margin_medium=0x7f040008;
-        public static final int margin_small=0x7f040009;
-        public static final int margin_tiny=0x7f04000a;
+        public static final int item_touch_helper_max_drag_scroll_per_frame=0x7f040006;
+        public static final int margin_huge=0x7f040007;
+        public static final int margin_large=0x7f040008;
+        public static final int margin_medium=0x7f040009;
+        public static final int margin_small=0x7f04000a;
+        public static final int margin_tiny=0x7f04000b;
         public static final int vertical_page_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_action_device_access_bluetooth_searching=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int tile=0x7f020002;
+        public static final int bluetooth_logo=0x7f020000;
+        public static final int ic_action_device_access_bluetooth_searching=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int tile=0x7f020003;
     }
     public static final class id {
-        public static final int alignBounds=0x7f090002;
-        public static final int alignMargins=0x7f090003;
-        public static final int bottom=0x7f090004;
-        public static final int button_scan=0x7f090016;
-        public static final int button_send=0x7f09001d;
-        public static final int center=0x7f090005;
-        public static final int center_horizontal=0x7f090006;
-        public static final int center_vertical=0x7f090007;
-        public static final int clip_horizontal=0x7f090008;
-        public static final int clip_vertical=0x7f090009;
-        public static final int discoverable=0x7f090020;
-        public static final int edit_text_out=0x7f09001c;
-        public static final int end=0x7f09000a;
-        public static final int fill=0x7f09000b;
-        public static final int fill_horizontal=0x7f09000c;
-        public static final int fill_vertical=0x7f09000d;
-        public static final int horizontal=0x7f090000;
-        public static final int in=0x7f09001b;
-        public static final int insecure_connect_scan=0x7f09001f;
-        public static final int left=0x7f09000e;
-        public static final int log_fragment=0x7f090019;
-        public static final int menu_toggle_log=0x7f090021;
-        public static final int new_devices=0x7f090015;
-        public static final int paired_devices=0x7f090013;
-        public static final int right=0x7f09000f;
-        public static final int sample_content_fragment=0x7f09001a;
-        public static final int sample_main_layout=0x7f090017;
-        public static final int sample_output=0x7f090018;
-        public static final int secure_connect_scan=0x7f09001e;
-        public static final int start=0x7f090010;
-        public static final int title_new_devices=0x7f090014;
-        public static final int title_paired_devices=0x7f090012;
-        public static final int top=0x7f090011;
-        public static final int vertical=0x7f090001;
+        public static final int alignBounds=0x7f070003;
+        public static final int alignMargins=0x7f070004;
+        public static final int bottom=0x7f070005;
+        public static final int button_scan=0x7f070017;
+        public static final int button_send=0x7f070025;
+        public static final int card_view=0x7f07001d;
+        public static final int center=0x7f070006;
+        public static final int center_horizontal=0x7f070007;
+        public static final int center_vertical=0x7f070008;
+        public static final int clip_horizontal=0x7f070009;
+        public static final int clip_vertical=0x7f07000a;
+        public static final int comment_btn=0x7f070021;
+        public static final int discoverable=0x7f070028;
+        public static final int edit_text_out=0x7f070024;
+        public static final int end=0x7f07000b;
+        public static final int fill=0x7f07000c;
+        public static final int fill_horizontal=0x7f07000d;
+        public static final int fill_vertical=0x7f07000e;
+        public static final int horizontal=0x7f070001;
+        public static final int in=0x7f070023;
+        public static final int insecure_connect_scan=0x7f070027;
+        public static final int item_touch_helper_previous_elevation=0x7f070000;
+        public static final int left=0x7f07000f;
+        public static final int log_fragment=0x7f07001a;
+        public static final int menu_toggle_log=0x7f070029;
+        public static final int my_recycler_view=0x7f07001c;
+        public static final int new_devices=0x7f070016;
+        public static final int paired_devices=0x7f070014;
+        public static final int rate_btn=0x7f070022;
+        public static final int right=0x7f070010;
+        public static final int sample_content_fragment=0x7f07001b;
+        public static final int sample_main_layout=0x7f070018;
+        public static final int sample_output=0x7f070019;
+        public static final int secure_connect_scan=0x7f070026;
+        public static final int start=0x7f070011;
+        public static final int timelineitem_imageView=0x7f07001e;
+        public static final int timelineitem_ratingBar=0x7f070020;
+        public static final int timelineitem_text=0x7f07001f;
+        public static final int title_new_devices=0x7f070015;
+        public static final int title_paired_devices=0x7f070013;
+        public static final int top=0x7f070012;
+        public static final int vertical=0x7f070002;
     }
     public static final class layout {
         public static final int activity_device_list=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int device_name=0x7f030002;
-        public static final int fragment_bluetooth_chat=0x7f030003;
-        public static final int message=0x7f030004;
+        public static final int activity_timeline=0x7f030002;
+        public static final int card_view=0x7f030003;
+        public static final int device_name=0x7f030004;
+        public static final int fragment_bluetooth_chat=0x7f030005;
+        public static final int message=0x7f030006;
     }
     public static final class menu {
-        public static final int bluetooth_chat=0x7f080000;
-        public static final int main=0x7f080001;
+        public static final int bluetooth_chat=0x7f090000;
+        public static final int main=0x7f090001;
     }
     public static final class string {
-        public static final int app_name=0x7f070000;
-        public static final int bt_not_enabled_leaving=0x7f070001;
-        public static final int button_scan=0x7f070002;
-        public static final int discoverable=0x7f070003;
-        public static final int insecure_connect=0x7f070004;
-        public static final int intro_message=0x7f070005;
-        public static final int none_found=0x7f070006;
-        public static final int none_paired=0x7f070007;
-        public static final int not_connected=0x7f070008;
-        public static final int sample_hide_log=0x7f070009;
-        public static final int sample_show_log=0x7f07000a;
-        public static final int scanning=0x7f07000b;
-        public static final int secure_connect=0x7f07000c;
-        public static final int select_device=0x7f07000d;
-        public static final int send=0x7f07000e;
-        public static final int title_connected_to=0x7f07000f;
-        public static final int title_connecting=0x7f070010;
-        public static final int title_not_connected=0x7f070011;
-        public static final int title_other_devices=0x7f070012;
-        public static final int title_paired_devices=0x7f070013;
+        public static final int app_name=0x7f080000;
+        public static final int bt_not_enabled_leaving=0x7f080001;
+        public static final int button_scan=0x7f080002;
+        public static final int discoverable=0x7f080003;
+        public static final int insecure_connect=0x7f080004;
+        public static final int intro_message=0x7f080005;
+        public static final int none_found=0x7f080006;
+        public static final int none_paired=0x7f080007;
+        public static final int not_connected=0x7f080008;
+        public static final int sample_hide_log=0x7f080009;
+        public static final int sample_show_log=0x7f08000a;
+        public static final int scanning=0x7f08000b;
+        public static final int secure_connect=0x7f08000c;
+        public static final int select_device=0x7f08000d;
+        public static final int send=0x7f08000e;
+        public static final int title_connected_to=0x7f08000f;
+        public static final int title_connecting=0x7f080010;
+        public static final int title_not_connected=0x7f080011;
+        public static final int title_other_devices=0x7f080012;
+        public static final int title_paired_devices=0x7f080013;
     }
     public static final class style {
         public static final int AppTheme=0x7f050003;
@@ -904,5 +948,89 @@ containing a value of this type.
           @attr name com.example.android.bluetoothchat:layout_rowWeight
         */
         public static final int GridLayout_Layout_layout_rowWeight = 9;
+        /** Attributes that can be used with a RecyclerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager com.example.android.bluetoothchat:layoutManager}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout com.example.android.bluetoothchat:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount com.example.android.bluetoothchat:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd com.example.android.bluetoothchat:stackFromEnd}</code></td><td></td></tr>
+           </table>
+           @see #RecyclerView_android_orientation
+           @see #RecyclerView_layoutManager
+           @see #RecyclerView_reverseLayout
+           @see #RecyclerView_spanCount
+           @see #RecyclerView_stackFromEnd
+         */
+        public static final int[] RecyclerView = {
+            0x010100c4, 0x7f010019, 0x7f01001a, 0x7f01001b,
+            0x7f01001c
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#orientation}
+          attribute's value can be found in the {@link #RecyclerView} array.
+          @attr name android:orientation
+        */
+        public static final int RecyclerView_android_orientation = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#layoutManager}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android.bluetoothchat:layoutManager
+        */
+        public static final int RecyclerView_layoutManager = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#reverseLayout}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android.bluetoothchat:reverseLayout
+        */
+        public static final int RecyclerView_reverseLayout = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#spanCount}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android.bluetoothchat:spanCount
+        */
+        public static final int RecyclerView_spanCount = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.android.bluetoothchat.R.attr#stackFromEnd}
+          attribute's value can be found in the {@link #RecyclerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.android.bluetoothchat:stackFromEnd
+        */
+        public static final int RecyclerView_stackFromEnd = 4;
     };
 }

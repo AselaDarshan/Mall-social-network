@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
+        "outputFile": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 115
                 },
                 "from": {
-                    "file": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/values-v11/template-styles.xml",
+                    "file": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/values-v11/template-styles.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,

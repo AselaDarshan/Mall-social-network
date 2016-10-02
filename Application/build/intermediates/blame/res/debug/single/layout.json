@@ -1,22 +1,30 @@
 [
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout/device_name.xml",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout/device_name.xml"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/message.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/message.xml"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout/activity_main.xml"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/card_view.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/card_view.xml"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout/message.xml",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout/message.xml"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/fragment_bluetooth_chat.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/fragment_bluetooth_chat.xml"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout/activity_device_list.xml",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout/activity_device_list.xml"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/activity_device_list.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/activity_device_list.xml"
     },
     {
-        "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout/fragment_bluetooth_chat.xml",
-        "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout/fragment_bluetooth_chat.xml"
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/device_name.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/device_name.xml"
+    },
+    {
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout/activity_timeline.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout/activity_timeline.xml"
     }
 ]
