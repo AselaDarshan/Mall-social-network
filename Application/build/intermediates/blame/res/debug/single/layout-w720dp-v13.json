@@ -2,5 +2,9 @@
     {
         "merged": "/home/asela/Downloads/BluetoothChat/Application/build/intermediates/res/merged/debug/layout-w720dp-v13/activity_main.xml",
         "source": "/home/asela/Downloads/BluetoothChat/Application/src/main/res/layout-w720dp/activity_main.xml"
+    },
+    {
+        "merged": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/build/intermediates/res/merged/debug/layout-w720dp-v13/activity_main.xml",
+        "source": "/home/thilina/AndroidStudioProjects/Mall-social-network/Application/src/main/res/layout-w720dp/activity_main.xml"
     }
 ]

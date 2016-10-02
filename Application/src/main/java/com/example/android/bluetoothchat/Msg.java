@@ -33,6 +33,17 @@ public class Msg {
         this.image = image;
     }
 
+    public Msg (String uid, String tstamp, int type, String inReplyToMessageID, String text, int rank, int noOfRankers, String image){
+        this.UID = uid;
+        this.tstamp = tstamp;
+        this.type = type;
+        this.inReplyToMessageID = inReplyToMessageID;
+        this.text = text;
+        this.rank = rank;
+        this.noOfRankers = noOfRankers;
+        this.image = image;
+    }
+
     public int getNoOfRankers() {
         return noOfRankers;
     }

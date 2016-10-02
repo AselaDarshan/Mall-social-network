@@ -3,10 +3,15 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-23</target>
+        <target>android-22</target>
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.Light</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -20,269 +25,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93bc908e-e935-49fd-af34-7cff132f7409" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/drawable-hdpi/new_msg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/CommentAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/CommentList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/Rating.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Comment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_comment_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_rating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/msg_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/values-w820dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/src/main/res/values/dimens.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/CardAdapter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/CardAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/R.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/aapt/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/res/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/CardAdapter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/CardAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/classes.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/coldswap.marker" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/resources.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout/card_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.3.0_b2cf96cd861b953325bf53fc69fa486a8a90d969/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-gridlayout-v7-23.3.0_c9d58d31a5caf0da7aa1961ffc10ccd34a035703/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-22.2.1_efffe12661db7eae769f23c4c8712b1314bb7551/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.3.0_4b40da0affaadeca23478261fdc2bfc291780e1c/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4bc30459f16a5e21de359a812333f68f1b3e8be5/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a203e23c2fcec3b93108c54c3737496a3e9506ff/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.3.0_09c4d1020056e2633384a8e1b2bc18a7cd872444/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.3.0_8de48971236d0ab53311c867af7dc0fce91c747d/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/CardAdapter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/CardAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/android/tools/fd/dummy/slice_0.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/android/support/v7/recyclerview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/android/support/v7/recyclerview/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/android/support/v7/recyclerview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/android/tools/fd/dummy/slice_1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/example/android/common/activities/SampleActivityBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/android/tools/fd/dummy/slice_2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/Log.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/LogWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/android/common/logger/MessageOnlyLogFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/android/tools/fd/dummy/slice_3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/android/tools/fd/dummy/slice_4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/android/tools/fd/dummy/slice_5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/android/tools/fd/dummy/slice_6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatService$AcceptThread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatService$ConnectThread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatService$ConnectedThread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatService$SendThread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BluetoothChatService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/DBHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/DeviceListActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/DeviceListActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/DeviceListActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/DeviceListActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/JsonHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/Msg.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/MsgListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/example/android/bluetoothchat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/v7/gridlayout/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/v7/gridlayout/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/v7/gridlayout/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/v7/gridlayout/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/android/support/v7/gridlayout/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/android/tools/fd/dummy/slice_7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/example/android/CardAdapter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/example/android/CardAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/example/android/Timeline.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/android/support/v7/cardview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/android/tools/fd/dummy/slice_8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/com/android/tools/fd/dummy/slice_9.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_22_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/CardAdapter.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/MsgAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/src/main/res/layout/card_view.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/comment_view.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/cardview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/gridlayout/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/Timeline.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/Timeline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/BluetoothChatFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/DeviceListActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/DeviceListActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/DeviceListActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/DeviceListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$drawable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$layout.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$menu.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/classes/debug/com/example/android/bluetoothchat/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/cardview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/gridlayout/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/android/support/v7/recyclerview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/Timeline.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/Timeline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/BluetoothChatFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/DeviceListActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/DeviceListActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/DeviceListActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/DeviceListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$drawable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$layout.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$menu.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental-verifier/debug/com/example/android/bluetoothchat/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/cardview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/gridlayout/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/Timeline.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/Timeline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/BluetoothChatFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/DeviceListActivity$3.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/DeviceListActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/DeviceListActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/DeviceListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/MainActivity.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$attr.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$color.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$dimen.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$drawable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$id.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$layout.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$menu.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$string.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$style.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$styleable.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R.class" afterPath="$PROJECT_DIR$/Application/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/android/bluetoothchat/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug.apk" afterPath="$PROJECT_DIR$/Application/build/outputs/apk/Application-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Application.iml" afterPath="$PROJECT_DIR$/Application/Application.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build.gradle" afterPath="$PROJECT_DIR$/Application/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/cardview/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/cardview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/gridlayout/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/gridlayout/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/bluetoothchat/R.java" afterPath="$PROJECT_DIR$/Application/build/generated/source/r/debug/com/example/android/bluetoothchat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-sw600dp-v13.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v11.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v21.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v23.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/layout-w720dp-v13.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/layout-w720dp-v13.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAndroidTestShaders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant-run-support/debug/manifest.crc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout/activity_timeline.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/layout/activity_timeline.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-sw600dp-v13/values-sw600dp-v13.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-sw600dp-v13/values-sw600dp-v13.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v11/values-v11.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v21/values-v21.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v21/values-v21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v23/values-v23.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values-v23/values-v23.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/restart-dex/debug/build-info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Application/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/Application/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/values-v21/base-template-styles.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/values-v21/base-template-styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <ignored path="BluetoothChat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -310,15 +87,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BluetoothChatFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="461" column="16" selection-start-line="461" selection-start-column="16" selection-end-line="461" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Timeline.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="e#1691#1923#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.1220339">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -329,8 +123,31 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9310345">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state vertical-scroll-proportion="-6.827586">
+              <caret line="24" column="42" selection-start-line="15" selection-start-column="4" selection-end-line="24" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.224138">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -340,20 +157,28 @@
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MsgAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/MsgAdapter.java">
+      <file leaf-file-name="Msg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="47" selection-start-line="57" selection-start-column="16" selection-end-line="58" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="35" column="134" selection-start-line="35" selection-start-column="134" selection-end-line="35" selection-end-column="134" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/CommentList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1920,11 +1745,12 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/values-v21/base-template-styles.xml" />
         <option value="$PROJECT_DIR$/Application/build.gradle" />
         <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/values/base-strings.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java" />
       </list>
     </option>
   </component>
@@ -1943,6 +1769,9 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
       <flattenPackages />
@@ -1958,39 +1787,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
+              <option name="myItemId" value="Mall-social-network" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
+              <option name="myItemId" value="Mall-social-network" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2004,7 +1833,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
+              <option name="myItemId" value="Mall-social-network" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2022,7 +1851,29 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity_main.xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2040,7 +1891,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BluetoothChat" />
+              <option name="myItemId" value="Mall-social-network" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2048,16 +1899,83 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluetoothchat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mall-social-network" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2066,6 +1984,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="E9AZCY14S287" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Application/src/main/res/drawable-hdpi" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -2160,6 +2079,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -2292,7 +2227,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Application" type="AndroidRunConfigurationType" factoryName="Android Application" activateToolWindowBeforeRun="false">
+    <configuration default="false" name="Application" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="Application" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2359,33 +2294,39 @@
       <option name="project" value="LOCAL" />
       <updated>1475417188842</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="FAB added to generate a new message">
+      <created>1475429715269</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1475429715269</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32348484" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32580644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2810606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5209677" sideWeight="0.87045455" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32419354" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5209677" sideWeight="0.87045455" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145161" sideWeight="0.4939577" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42258066" sideWeight="0.12954545" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24924242" sideWeight="0.2580645" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.24242425" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.75757575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24924242" sideWeight="0.7419355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2401,19 +2342,54 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Timeline was setup as the main activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Timeline was setup as the main activity" />
+    <MESSAGE value="FAB added to generate a new message" />
+    <option name="LAST_COMMIT_MESSAGE" value="FAB added to generate a new message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_timeline.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/MsgAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="47" selection-start-line="57" selection-start-column="16" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="461" column="16" selection-start-line="461" selection-start-column="16" selection-end-line="461" selection-end-column="16" />
           <folding>
-            <element signature="e#0#17913#0" expanded="false" />
+            <element signature="e#0#17897#0" expanded="false" />
             <element signature="imports" expanded="false" />
           </folding>
         </state>
@@ -2460,7 +2436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2469,17 +2444,6 @@
         <state vertical-scroll-proportion="0.3898305">
           <caret line="360" column="37" selection-start-line="360" selection-start-column="37" selection-end-line="360" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="461" column="16" selection-start-line="461" selection-start-column="16" selection-end-line="461" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#17913#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2581,22 +2545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/CommentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04255319">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/comment_view.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -2662,24 +2610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/MsgAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="47" selection-start-line="57" selection-start-column="16" selection-end-line="58" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2862823">
@@ -2706,13 +2636,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/MsgAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="47" selection-start-line="57" selection-start-column="16" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.45378152">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_new_message.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.965517">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MsgListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27457628">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/CommentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/Msg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="134" selection-start-line="35" selection-start-column="134" selection-end-line="35" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/NewMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2722,20 +2702,60 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9310345">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state vertical-scroll-proportion="-6.827586">
+          <caret line="24" column="42" selection-start-line="15" selection-start-column="4" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.224138">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/activities/SampleActivityBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/logger/LogFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/bluetoothchat/BluetoothChatFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="461" column="16" selection-start-line="461" selection-start-column="16" selection-end-line="461" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/Timeline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#1691#1923#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.1220339">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

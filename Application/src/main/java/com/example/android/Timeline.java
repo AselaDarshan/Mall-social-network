@@ -42,14 +42,14 @@ public class Timeline extends Activity {
         mAdapter = new MsgAdapter(itemList, Timeline.this);
         mRecyclerView.setAdapter(mAdapter);
 
-        FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.fab);
         FAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Timeline.this, NewMessage.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         setUpData();
     }
