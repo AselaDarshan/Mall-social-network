@@ -16,4 +16,6 @@ public interface MsgListener {
     public ArrayList<Comment> getComments(String uid);
 
     public void updateRank(String uid, int rank);
+
+    public boolean checkMsg(Msg msg);
 }

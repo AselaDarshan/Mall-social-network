@@ -23,6 +23,8 @@ import android.support.v4.app.FragmentTransaction;
 import com.example.android.TimelineFragment;
 import com.example.android.common.activities.SampleActivityBase;
 
+import org.json.JSONObject;
+
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
  * {@link android.support.v4.app.Fragment} which can display a view.
@@ -54,10 +56,9 @@ public class MainActivity extends SampleActivityBase implements BluetoothChatFra
     }
 
     @Override
-    public void sendText(String text) {
-        // Get Fragment B
+    public void sendText(String message) {
         TimelineFragment frag = (TimelineFragment)
                 getSupportFragmentManager().findFragmentById(R.id.timeline_fragment);
-        frag.send(text);
+        frag.receive(message);
     }
 }

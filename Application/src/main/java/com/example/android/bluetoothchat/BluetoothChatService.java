@@ -24,9 +24,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.widget.ArrayAdapter;
-
-import com.example.android.common.logger.Log;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -578,7 +576,7 @@ public class BluetoothChatService {
 
         public SendThread(String message, ArrayList<BluetoothDevice> mDevices)
         {
-            Log.d(TAG,"Send Thread Started");
+            Log.d(TAG,"Send Thread Started : Message - "+message);
             BluetoothChatService.this.message = message;
             this.bDevices = mDevices;
         }
