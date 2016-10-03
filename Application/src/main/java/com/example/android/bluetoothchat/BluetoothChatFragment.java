@@ -33,6 +33,7 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -53,6 +54,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -73,6 +75,7 @@ public class BluetoothChatFragment extends Fragment{
     private Button mSendButton;
     private Button mUploadButton;
     private ImageView mImage;
+    String encoded = null;
 
     private String mMessage;
     /**
@@ -200,6 +203,7 @@ public class BluetoothChatFragment extends Fragment{
                         mMessage = getJSONMessage(textMessage).toString();
                         mCallback.sendText(mMessage);
                         textView.setText(null);
+                        mImage.setImageBitmap(null);
                         doDiscovery();
                     }
                 }
@@ -360,7 +364,7 @@ public class BluetoothChatFragment extends Fragment{
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-                    Log.d(TAG,"Sent message : "+writeMessage);
+                    Log.d(TAG, "Sent message : " + writeMessage);
                     //mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
                 case Constants.MESSAGE_READ:
@@ -406,6 +410,10 @@ public class BluetoothChatFragment extends Fragment{
                     try {
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getApplicationContext().getContentResolver(), uri);
                         // Log.d(TAG, String.valueOf(bitmap));
+                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                        byte[] byteArray = byteArrayOutputStream .toByteArray();
+                        encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
                         mImage.setImageBitmap(bitmap);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -534,13 +542,13 @@ public class BluetoothChatFragment extends Fragment{
             object.put("text", msg);
             object.put("rank", new Integer(0));
             object.put("noOfRankers", new Integer(0));
-            object.put("image", null);
+            object.put("image", encoded);
             android.util.Log.e("INFO", object.toString());
         } catch (JSONException e) {
             Log.e("BluetoothChatService","Error occurred while making message JSON");
             e.printStackTrace();
         }
-
+        encoded = null;
         return object;
     }
 }

@@ -3,7 +3,11 @@ package com.example.android;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -102,8 +106,16 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder>{
         // - replace the contents of the view with that element
         holder.mTextView.setText(itemList.get(position).getText());
         holder.mRatingBar.setRating(itemList.get(position).getRank());
-        if(itemList.get(position).getImage()!= null)
-            holder.mImageView.setImageResource(R.drawable.bluetooth_logo);
+        if(itemList.get(position).getImage()!= null) {
+            Log.e("INFO", itemList.get(position).getImage());
+            String encodedImage = itemList.get(position).getImage();
+            byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
+            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+
+            holder.mImageView.setImageBitmap(decodedByte);
+        } else{
+            holder.mImageView.setVisibility(View.GONE);
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
