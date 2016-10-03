@@ -71,7 +71,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
         ArrayList<Msg> msgList = null;
         try{
             msgList = new ArrayList<Msg>();
-            String QUERY = "SELECT * FROM "+TABLE_NAME+" WHERE " + KEY_TYPE + "=1";
+            String QUERY = "SELECT * FROM "+TABLE_NAME+" WHERE " + KEY_TYPE + "=1 ORDER BY "+ KEY_ID + " DESC";
             Cursor cursor = db.rawQuery(QUERY, null);
             if(!cursor.isLast())
             {
@@ -149,4 +149,25 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
         }
 
     }
+    public boolean checkMsg(Msg msg){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String uid= msg.getUID();
+        try{
+            String QUERY = "SELECT * FROM "+TABLE_NAME+" WHERE " + KEY_UID + "='"+uid+"'";
+            Cursor cursor = db.rawQuery(QUERY, null);
+            if(cursor.getCount() <= 0){
+                cursor.close();
+                this.addMsg(msg);
+                return true;
+            }
+            cursor.close();
+
+        }catch (Exception e){
+            Log.e("Errorrrrrr",e+"");
+        }
+
+        return false;
+    }
+
+
 }

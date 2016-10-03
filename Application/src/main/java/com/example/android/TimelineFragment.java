@@ -20,10 +20,13 @@ import com.example.android.bluetoothchat.Msg;
 import com.example.android.bluetoothchat.MsgListener;
 import com.example.android.bluetoothchat.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimelineFragment extends Fragment {
+public class TimelineFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -95,12 +98,48 @@ public class TimelineFragment extends Fragment {
         mAdapter.notifyDataSetChanged();
     }
 
-    public void send(String msg){
-        Long tsLong = System.currentTimeMillis()/1000;
-        String ts = tsLong.toString();
-        dbHandler.addMsg(new Msg("123456789-"+ts, ts, 1, null, msg, 0, 0, null ));
-        itemList.clear();
-        itemList.addAll(dbHandler.getAllMsg());
-        mAdapter.notifyDataSetChanged();
+
+    public void receive(String message){
+        Log.d("BluetoothChatService","Message received : "+message);
+        JSONObject msg = null;
+        try {
+            msg = new JSONObject(message);
+
+
+            String UID = null;
+            String tstamp = null;
+            int type = 0;
+            String inReplyToMessageID = null;
+            String text = null;
+            int rank = 0;
+            int noOfRankers = 0;
+            String image = null;
+
+            try {
+                UID = msg.getString("UID");
+                tstamp = msg.getString("timeStamp");
+                type = msg.getInt("type");
+                if(msg.has("inReplyToMessageID"))
+                    inReplyToMessageID = msg.getString("inReplyToMessageID");
+                if(msg.has("text"))
+                    text = msg.getString("text");
+                rank = msg.getInt("rank");
+                noOfRankers = msg.getInt("noOfRankers");
+                if(msg.has("image"))
+                    image = msg.getString("image");
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.e("JSONException","Exception occurred while getting data from JSON object");
+            }
+
+            dbHandler.checkMsg(new Msg(UID, tstamp, type, inReplyToMessageID, text, rank, noOfRankers, image));
+            itemList.clear();
+            itemList.addAll(dbHandler.getAllMsg());
+            mAdapter.notifyDataSetChanged();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("JSONException","Exception occurred while creating JSON object");
+        }
     }
 }

@@ -33,6 +33,7 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -49,8 +50,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.TimelineFragment;
-import com.example.android.common.logger.Log;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -58,7 +59,7 @@ import java.util.ArrayList;
 /**
  * This fragment controls Bluetooth to communicate with other devices.
  */
-public class BluetoothChatFragment extends Fragment {
+public class BluetoothChatFragment extends Fragment{
 
     private static final String TAG = "BluetoothChatFragment";
 
@@ -177,6 +178,8 @@ public class BluetoothChatFragment extends Fragment {
     private void setupChat() {
         Log.d(TAG, "setupChat()");
 
+        ensureDiscoverable();
+
         // Initialize the array adapter for the conversation thread
         mConversationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.message);
 
@@ -190,14 +193,15 @@ public class BluetoothChatFragment extends Fragment {
                 View view = getView();
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.edit_text_out);
-                    mMessage = textView.getText().toString();
+                    String textMessage = textView.getText().toString();
 
-                    if(mMessage!=null && mMessage.length() > 0) {
+                    if(textMessage!=null && textMessage.length() > 0) {
+                        Log.d("BluetoothChatService","Message to sent : "+textMessage);
+                        mMessage = getJSONMessage(textMessage).toString();
                         mCallback.sendText(mMessage);
                         textView.setText(null);
+                        doDiscovery();
                     }
-                    //sendMessage(message);
-                    doDiscovery();
                 }
             }
         });
@@ -356,27 +360,24 @@ public class BluetoothChatFragment extends Fragment {
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-                    mConversationArrayAdapter.add("Me:  " + writeMessage);
+                    Log.d(TAG,"Sent message : "+writeMessage);
+                    //mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
                 case Constants.MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                    Log.d(TAG,"Received Message : "+readMessage);
+                    mCallback.sendText(readMessage);
+                    //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
                     mConnectedDeviceName = msg.getData().getString(Constants.DEVICE_NAME);
-                    if (null != activity) {
-                        Toast.makeText(activity, "Connected to "
-                                + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
-                    }
+                    Log.d(TAG, "Connected to "
+                                + mConnectedDeviceName);
                     break;
                 case Constants.MESSAGE_TOAST:
-                    if (null != activity) {
-                        Toast.makeText(activity, msg.getData().getString(Constants.TOAST),
-                                Toast.LENGTH_SHORT).show();
-                    }
                     break;
             }
         }
@@ -384,18 +385,6 @@ public class BluetoothChatFragment extends Fragment {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-//            case REQUEST_CONNECT_DEVICE_SECURE:
-//                // When DeviceListActivity returns with a device to connect
-//                if (resultCode == Activity.RESULT_OK) {
-//                    connectDevice(data, true);
-//                }
-//                break;
-//            case REQUEST_CONNECT_DEVICE_INSECURE:
-//                // When DeviceListActivity returns with a device to connect
-//                if (resultCode == Activity.RESULT_OK) {
-//                    connectDevice(data, false);
-//                }
-//                break;
             case REQUEST_ENABLE_BT:
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
@@ -527,14 +516,31 @@ public class BluetoothChatFragment extends Fragment {
         }
     }
 
-    public void someMethod(){
-        mCallback.sendText("YOUR TEXT");
-    }
-
     @Override
     public void onDetach() {
         mCallback = null; // => avoid leaking, thanks @Deepscorn
         super.onDetach();
     }
 
+    public JSONObject getJSONMessage(String msg){
+        Long tsLong = System.currentTimeMillis()/1000;
+        String ts = tsLong.toString();
+        JSONObject object = new JSONObject();
+        try {
+            object.put("UID", "123456789-"+ts);
+            object.put("timeStamp", ts);
+            object.put("type", new Integer(1));
+            object.put("inReplyToMessageID", null);
+            object.put("text", msg);
+            object.put("rank", new Integer(0));
+            object.put("noOfRankers", new Integer(0));
+            object.put("image", null);
+            android.util.Log.e("INFO", object.toString());
+        } catch (JSONException e) {
+            Log.e("BluetoothChatService","Error occurred while making message JSON");
+            e.printStackTrace();
+        }
+
+        return object;
+    }
 }
