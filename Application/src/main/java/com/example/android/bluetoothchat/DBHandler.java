@@ -66,6 +66,7 @@ public class DBHandler extends SQLiteOpenHelper implements MsgListener {
 
     @Override
     public ArrayList<Msg> getAllMsg() {
+
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<Msg> msgList = null;
         try{
