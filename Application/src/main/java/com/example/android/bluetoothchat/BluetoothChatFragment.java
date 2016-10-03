@@ -186,6 +186,11 @@ public class BluetoothChatFragment extends Fragment {
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.edit_text_out);
                     mMessage = textView.getText().toString();
+
+                    if(mMessage!=null && mMessage.length() > 0) {
+                        mCallback.sendText(mMessage);
+                        textView.setText(null);
+                    }
                     //sendMessage(message);
                     doDiscovery();
                 }
@@ -248,7 +253,6 @@ public class BluetoothChatFragment extends Fragment {
         */
         // Check that there's actually something to send
         if (message!=null && message.length() > 0) {
-            mCallback.sendText(message);
             mChatService.sendMessage(message,mDevices);
 
             // Reset out string buffer to zero and clear the edit text field

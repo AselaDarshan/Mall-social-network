@@ -29,7 +29,7 @@ public class TimelineFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Msg> itemList = new ArrayList<>();
-    private DBHandler dbHandler = new DBHandler(getContext());
+    private DBHandler dbHandler ;
     private boolean timeline = false;
 
     @Override
@@ -58,6 +58,8 @@ public class TimelineFragment extends Fragment {
         // specify an adapter (see also next example)
         mAdapter = new MsgAdapter(itemList, getActivity());
         mRecyclerView.setAdapter(mAdapter);
+
+        dbHandler = new DBHandler(getActivity().getApplicationContext());
 
         setUpData();
     }
