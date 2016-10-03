@@ -24,9 +24,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -41,6 +44,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +52,7 @@ import android.widget.Toast;
 import com.example.android.TimelineFragment;
 import com.example.android.common.logger.Log;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -58,14 +63,15 @@ public class BluetoothChatFragment extends Fragment {
     private static final String TAG = "BluetoothChatFragment";
 
     // Intent request codes
-    private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
+    private static final int PICK_IMAGE_REQUEST = 1;
 
     // Layout Views
-    private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
+    private Button mUploadButton;
+    private ImageView mImage;
 
     private String mMessage;
     /**
@@ -159,9 +165,10 @@ public class BluetoothChatFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        mConversationView = (ListView) view.findViewById(R.id.in);
         mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
         mSendButton = (Button) view.findViewById(R.id.button_send);
+        mUploadButton = (Button) view.findViewById(R.id.upload_btn);
+        mImage = (ImageView) view.findViewById(R.id.msg_img);
     }
 
     /**
@@ -172,8 +179,6 @@ public class BluetoothChatFragment extends Fragment {
 
         // Initialize the array adapter for the conversation thread
         mConversationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.message);
-
-        mConversationView.setAdapter(mConversationArrayAdapter);
 
         // Initialize the compose field with a listener for the return key
         mOutEditText.setOnEditorActionListener(mWriteListener);
@@ -193,6 +198,20 @@ public class BluetoothChatFragment extends Fragment {
                     }
                     //sendMessage(message);
                     doDiscovery();
+                }
+            }
+        });
+
+        mUploadButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                View view = getView();
+                if (null != view) {
+                    Intent intent = new Intent();
+// Show only images, no videos or anything else
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+// Always show the chooser (if there are multiple options available)
+                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
                 }
             }
         });
@@ -388,6 +407,20 @@ public class BluetoothChatFragment extends Fragment {
                     Toast.makeText(getActivity(), R.string.bt_not_enabled_leaving,
                             Toast.LENGTH_SHORT).show();
                     getActivity().finish();
+                }
+
+            case PICK_IMAGE_REQUEST:
+                if (resultCode == Activity.RESULT_OK && data != null && data.getData() != null) {
+
+                    Uri uri = data.getData();
+
+                    try {
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getApplicationContext().getContentResolver(), uri);
+                        // Log.d(TAG, String.valueOf(bitmap));
+                        mImage.setImageBitmap(bitmap);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
         }
     }
